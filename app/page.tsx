@@ -11,7 +11,7 @@ const strengths = [
 export default function Home() {
   return (
     <div
-      className="min-h-screen -mt-14 flex flex-col"
+      className="min-h-screen flex flex-col"
       style={{
         background: "#f2f2f0",
         backgroundImage:

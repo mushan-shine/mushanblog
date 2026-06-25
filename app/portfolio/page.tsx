@@ -30,8 +30,8 @@ const cases = [
 
 export default function Portfolio() {
   return (
-    <div className="max-w-2xl mx-auto px-6">
-      <PageHeader label="案例" title="我能做什么" desc="没有正式销售经历，就用行动来证明。这里是模拟的售前场景、产品拆解，以及实际动手的项目。" />
+    <div className="max-w-[960px] mx-auto px-6">
+      <PageHeader title="我能做什么" desc="没有正式销售经历，就用行动来证明。这里是模拟的售前场景、产品拆解，以及实际动手的项目。" />
       <section className="pb-24 flex flex-col gap-4">
         {cases.map((c) => (
           <Link key={c.title} href={c.href} className="group bg-white rounded-2xl border border-neutral-200/80 p-6 hover:border-neutral-300 hover:shadow-sm transition-all block">

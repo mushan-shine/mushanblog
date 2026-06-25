@@ -29,6 +29,26 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## 站点备忘
+
+### 思考页面新增权限
+
+`/thoughts` 页面的 + 按钮默认对访客隐藏。只有带正确 URL 参数才会显示：
+
+```
+/thoughts?edit=mushan
+```
+
+参数值在 `app/thoughts/page.tsx` 的 `canEdit` 行修改：
+
+```ts
+const canEdit = searchParams.get("edit") === "mushan";
+```
+
+新增的内容存储在浏览器 `localStorage`（key: `thoughts_entries`），刷新不丢失，但换设备/浏览器不同步。
+
+---
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

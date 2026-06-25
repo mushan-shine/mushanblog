@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Caveat } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import BannerWrapper from "@/components/BannerWrapper";
+import MainWrapper from "@/components/MainWrapper";
 import SparkleEffect from "@/components/SparkleEffect";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -17,8 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh-CN" className={`${geist.variable} ${caveat.variable} antialiased`}>
       <body className="bg-[#f2f2f0] text-neutral-900">
         <SparkleEffect />
+        <BannerWrapper />
         <Nav />
-        <main>{children}</main>
+        <MainWrapper>{children}</MainWrapper>
       </body>
     </html>
   );

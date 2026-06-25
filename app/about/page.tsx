@@ -16,11 +16,11 @@ const skillGroups = [
 
 export default function About() {
   return (
-    <div className="max-w-2xl mx-auto px-6">
-      <PageHeader label="关于我" title="我的背景" desc="技术研发 + 售前经验，专注 AI 大模型与数据平台方向的技术型销售。" />
+    <div className="max-w-[960px] mx-auto px-6">
+      <PageHeader title="我的背景" desc="技术研发 + 售前经验，专注 AI 大模型与数据平台方向的技术型销售。" />
 
       <div className="mb-6">
-        <a href="/resume.pdf" className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white text-sm rounded-lg hover:bg-neutral-700 transition-colors">
+        <a href="/resume.pdf" className="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg transition-colors" style={{ background: "rgba(255,255,255,0.9)", color: "#1a1a1a", fontWeight: 600 }}>
           下载简历 PDF ↓
         </a>
       </div>

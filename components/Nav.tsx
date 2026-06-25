@@ -12,7 +12,7 @@ const links = [
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <header className="sticky z-50" style={{ top: "20px", height: "56px", background: "transparent", marginTop: "20px" }}>
+    <header className="fixed z-50" style={{ top: pathname === "/" ? "40vh" : 0, left: 0, right: 0, height: "56px", background: "rgba(242,242,240,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
       <div className="h-full flex items-center justify-between" style={{ maxWidth: "960px", margin: "0 auto", width: "100%", padding: "0 64px" }}>
         <Link href="/" className="font-bold text-neutral-800" style={{ fontFamily: "var(--font-caveat)", fontSize: "20px" }}>
           木杉

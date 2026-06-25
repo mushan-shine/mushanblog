@@ -23,30 +23,37 @@ export default function Insights() {
   const filtered = active === "全部" ? posts : posts.filter((p) => p.category === active);
 
   return (
-    <div className="max-w-2xl mx-auto px-6">
-      <PageHeader label="思考" title="我在想什么" desc="销售方法论 × AI 技术理解。记录学习过程，也记录思考结果。" />
+    <div className="max-w-[960px] mx-auto px-6">
+      <PageHeader title="我在想什么" desc="销售方法论 × AI 技术理解。记录学习过程，也记录思考结果。" />
       <div className="flex gap-2 pb-8 overflow-x-auto">
         {categories.map((c) => (
-          <button key={c} onClick={() => setActive(c)} className={`text-xs px-3.5 py-1.5 rounded-full border whitespace-nowrap transition-all cursor-pointer ${active === c ? "bg-neutral-900 text-white border-neutral-900" : "border-neutral-200 text-neutral-500 hover:border-neutral-400"}`}>
+          <button
+            key={c}
+            onClick={() => setActive(c)}
+            className="text-xs px-3.5 py-1.5 rounded-full whitespace-nowrap transition-all cursor-pointer"
+            style={{
+              border: `1px solid ${active === c ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.3)"}`,
+              background: active === c ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.1)",
+              color: active === c ? "#1a1a1a" : "rgba(255,255,255,0.75)",
+            }}
+          >
             {c}
           </button>
         ))}
       </div>
-      <section className="pb-24">
-        <div className="bg-white rounded-2xl border border-neutral-200/80 divide-y divide-neutral-100">
-          {filtered.map((p) => (
-            <a key={p.title} href={p.href} className="group block px-6 py-5 hover:bg-neutral-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1 min-w-0">
-                  <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor[p.category]} inline-block mb-2`}>{p.category}</span>
-                  <h2 className="font-medium text-neutral-900 mb-1 text-sm group-hover:text-neutral-600 transition-colors">{p.title}</h2>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{p.desc}</p>
-                </div>
-                <span className="text-xs text-neutral-300 flex-shrink-0 mt-1">{p.date}</span>
+      <section className="pb-24 flex flex-col gap-4">
+        {filtered.map((p) => (
+          <a key={p.title} href={p.href} className="group bg-white rounded-2xl border border-neutral-200/80 p-6 hover:border-neutral-300 hover:shadow-sm transition-all block">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1 min-w-0">
+                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor[p.category]} inline-block mb-2`}>{p.category}</span>
+                <h2 className="font-medium text-neutral-900 mb-1 text-sm group-hover:text-neutral-600 transition-colors">{p.title}</h2>
+                <p className="text-sm text-neutral-500 leading-relaxed">{p.desc}</p>
               </div>
-            </a>
-          ))}
-        </div>
+              <span className="text-xs text-neutral-300 flex-shrink-0 mt-1">{p.date}</span>
+            </div>
+          </a>
+        ))}
       </section>
     </div>
   );
