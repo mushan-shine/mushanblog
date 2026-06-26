@@ -120,27 +120,27 @@ function ThoughtsInner() {
   const startOffset = (firstDay.getDay() + 6) % 7;
 
   return (
-    <div className="max-w-[960px] mx-auto px-6 pb-24">
-      <section className="pt-10 pb-8">
-        <h1 className="text-3xl font-semibold tracking-tight mb-2" style={{ color: "#ffffff", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>一闪而过的感触</h1>
-        <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>记录那些突然冒出来、不想忘记的想法。</p>
+    <div className="max-w-[960px] mx-auto px-6 pb-4">
+      <section className="pt-6 pb-4 flex items-baseline gap-3">
+        <h1 className="text-2xl font-semibold tracking-tight flex-shrink-0" style={{ color: "#ffffff", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>一闪而过的感触</h1>
+        <p className="text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>记录那些突然冒出来、不想忘记的想法。</p>
       </section>
 
       {/* 日历 */}
-      <div className="bg-white rounded-2xl border border-neutral-200/80 p-6 mb-6">
-        <div className="flex items-center justify-between mb-5">
-          <button onClick={prevMonth} className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-neutral-100 transition-colors text-neutral-500 text-lg">‹</button>
-          <span className="font-semibold text-neutral-800">{viewYear} 年 {monthNames[viewMonth]}</span>
-          <button onClick={nextMonth} className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-neutral-100 transition-colors text-neutral-500 text-lg">›</button>
+      <div className="bg-white rounded-xl border border-neutral-200/80 p-3 mb-3 mt-4">
+        <div className="flex items-center justify-between mb-3">
+          <button onClick={prevMonth} className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-neutral-100 transition-colors text-neutral-500 text-base">‹</button>
+          <span className="font-semibold text-neutral-800 text-sm">{viewYear} 年 {monthNames[viewMonth]}</span>
+          <button onClick={nextMonth} className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-neutral-100 transition-colors text-neutral-500 text-base">›</button>
         </div>
 
-        <div className="grid grid-cols-7 mb-2">
+        <div className="grid grid-cols-7 mb-1">
           {WEEKDAYS.map(d => (
-            <div key={d} className="text-center text-xs text-neutral-400 py-1">{d}</div>
+            <div key={d} className="text-center text-[10px] text-neutral-400 py-0.5">{d}</div>
           ))}
         </div>
 
-        <div className="grid grid-cols-7 gap-y-1">
+        <div className="grid grid-cols-7 gap-y-0.5">
           {Array.from({ length: startOffset }).map((_, i) => <div key={`empty-${i}`} />)}
           {Array.from({ length: daysInMonth }).map((_, i) => {
             const day = i + 1;
@@ -163,7 +163,7 @@ function ThoughtsInner() {
                 key={key}
                 onClick={() => { setSelected(isSelected ? null : key); setItemIndex(0); setAdding(false); }}
                 className="relative flex flex-col items-center justify-center rounded-xl transition-all"
-                style={{ background: isSelected ? "#1a1a1a" : isToday ? "rgba(0,0,0,0.06)" : "transparent", cursor: "pointer", padding: "4px 2px", minHeight: "52px" }}
+                style={{ background: isSelected ? "#1a1a1a" : isToday ? "rgba(0,0,0,0.06)" : "transparent", cursor: "pointer", padding: "1px", minHeight: "22px" }}
               >
                 <span className="text-sm leading-none" style={{ color: isSelected ? "#fff" : isToday ? "#1a1a1a" : "#374151", fontWeight: isToday || isSelected ? 600 : 400 }}>{day}</span>
                 <span className="text-[9px] leading-none mt-1" style={{ color: isSelected ? "rgba(255,255,255,0.6)" : jieQi ? "#e06c4a" : "#b0aca4" }}>{lunarLabel}</span>

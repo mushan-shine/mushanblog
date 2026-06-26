@@ -41,14 +41,14 @@ export default function Insights() {
           </button>
         ))}
       </div>
-      <section className="pb-24 flex flex-col gap-4">
+      <section className="pb-24 flex flex-col gap-3">
         {filtered.map((p) => (
-          <a key={p.title} href={p.href} className="group bg-white rounded-2xl border border-neutral-200/80 p-6 hover:border-neutral-300 hover:shadow-sm transition-all block">
+          <a key={p.title} href={p.href} className="group bg-white rounded-xl border border-neutral-200/80 p-4 hover:border-neutral-300 hover:shadow-sm transition-all block">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
-                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor[p.category]} inline-block mb-2`}>{p.category}</span>
+                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor[p.category]} inline-block mb-1.5`}>{p.category}</span>
                 <h2 className="font-medium text-neutral-900 mb-1 text-sm group-hover:text-neutral-600 transition-colors">{p.title}</h2>
-                <p className="text-sm text-neutral-500 leading-relaxed">{p.desc}</p>
+                <p className="text-xs text-neutral-500 leading-relaxed">{p.desc}</p>
               </div>
               <span className="text-xs text-neutral-300 flex-shrink-0 mt-1">{p.date}</span>
             </div>

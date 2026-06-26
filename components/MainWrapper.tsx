@@ -9,6 +9,7 @@ export default function MainWrapper({ children }: { children: React.ReactNode })
     <main
       style={{
         paddingTop: isHome ? "calc(40vh + 56px)" : "56px",
+        paddingBottom: "40px",
         minHeight: "100vh",
         ...(isHome
           ? {}

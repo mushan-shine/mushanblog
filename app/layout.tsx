@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import BannerWrapper from "@/components/BannerWrapper";
 import MainWrapper from "@/components/MainWrapper";
 import SparkleEffect from "@/components/SparkleEffect";
+import Footer from "@/components/Footer";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const caveat = Caveat({ variable: "--font-caveat", subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BannerWrapper />
         <Nav />
         <MainWrapper>{children}</MainWrapper>
+        <Footer />
       </body>
     </html>
   );
