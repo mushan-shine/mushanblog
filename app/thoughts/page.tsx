@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Lunar, Solar } from "lunar-javascript";
 
@@ -66,6 +66,14 @@ function toKey(y: number, m: number, d: number) {
 }
 
 export default function Thoughts() {
+  return (
+    <Suspense>
+      <ThoughtsInner />
+    </Suspense>
+  );
+}
+
+function ThoughtsInner() {
   const today = new Date();
   const todayKey = toKey(today.getFullYear(), today.getMonth(), today.getDate());
 
