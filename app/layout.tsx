@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Caveat } from "next/font/google";
+import { Geist, Caveat, ZCOOL_KuaiLe } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import BannerWrapper from "@/components/BannerWrapper";
@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const caveat = Caveat({ variable: "--font-caveat", subsets: ["latin"] });
+const kuaile = ZCOOL_KuaiLe({ variable: "--font-kuaile", subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "木杉 | AI 技术销售",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN" className={`${geist.variable} ${caveat.variable} antialiased`}>
+    <html lang="zh-CN" className={`${geist.variable} ${caveat.variable} ${kuaile.variable} antialiased`}>
       <body className="bg-[#f2f2f0] text-neutral-900">
         <SparkleEffect />
         <BannerWrapper />
