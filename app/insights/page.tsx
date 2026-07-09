@@ -1,60 +1,14 @@
-"use client";
-import { useState } from "react";
 import PageHeader from "@/components/PageHeader";
-
-const categories = ["全部", "Sales × AI", "产品拆解", "AI 学习", "方法论"];
-
-const posts = [
-  { category: "Sales × AI", title: "用 SPIN 拆解一次 AI 大模型的客户发现对话", desc: "SPIN 提问法如何在 AI 产品销售中落地？用一个虚构的客户对话来实战演练。", date: "即将发布", href: "#" },
-  { category: "方法论", title: "MEDDIC 框架：AI 项目中如何量化 Metrics", desc: "AI 项目的 ROI 往往难以量化，这是销售最常遇到的障碍之一。MEDDIC 的 M 怎么用？", date: "即将发布", href: "#" },
-  { category: "AI 学习", title: "大模型 RAG 技术：非技术客户能听懂的解释", desc: "如果客户问：你们的 AI 怎么知道我们公司的内部文档？这篇给你一个能讲清楚的答案。", date: "即将发布", href: "#" },
-  { category: "产品拆解", title: "阿里云 PAI vs 华为 ModelArts：技术销售怎么选边站", desc: "两个平台的功能对比不是重点，重点是面对不同客户背景时各自的差异化叙事。", date: "即将发布", href: "#" },
-];
-
-const categoryColor: Record<string, string> = {
-  "Sales × AI": "bg-blue-50 text-blue-600",
-  "产品拆解": "bg-violet-50 text-violet-600",
-  "AI 学习": "bg-amber-50 text-amber-600",
-  "方法论": "bg-emerald-50 text-emerald-600",
-};
+import InsightsList from "@/components/InsightsList";
+import { getAllPosts } from "@/lib/posts";
 
 export default function Insights() {
-  const [active, setActive] = useState("全部");
-  const filtered = active === "全部" ? posts : posts.filter((p) => p.category === active);
+  const posts = getAllPosts();
 
   return (
     <div className="max-w-[960px] mx-auto px-6">
       <PageHeader title="我在想什么" desc="销售方法论 × AI 技术理解。记录学习过程，也记录思考结果。" />
-      <div className="flex gap-2 pb-8 overflow-x-auto">
-        {categories.map((c) => (
-          <button
-            key={c}
-            onClick={() => setActive(c)}
-            className="text-xs px-3.5 py-1.5 rounded-full whitespace-nowrap transition-all cursor-pointer"
-            style={{
-              border: `1px solid ${active === c ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.3)"}`,
-              background: active === c ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.1)",
-              color: active === c ? "#1a1a1a" : "rgba(255,255,255,0.75)",
-            }}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-      <section className="pb-24 flex flex-col gap-3">
-        {filtered.map((p) => (
-          <a key={p.title} href={p.href} className="group bg-white rounded-xl border border-neutral-200/80 p-4 hover:border-neutral-300 hover:shadow-sm transition-all block">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1 min-w-0">
-                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor[p.category]} inline-block mb-1.5`}>{p.category}</span>
-                <h2 className="font-medium text-neutral-900 mb-1 text-sm group-hover:text-neutral-600 transition-colors">{p.title}</h2>
-                <p className="text-xs text-neutral-500 leading-relaxed">{p.desc}</p>
-              </div>
-              <span className="text-xs text-neutral-300 flex-shrink-0 mt-1">{p.date}</span>
-            </div>
-          </a>
-        ))}
-      </section>
+      <InsightsList posts={posts} />
     </div>
   );
 }
