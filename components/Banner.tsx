@@ -43,9 +43,9 @@ export default function Banner() {
           position: "absolute",
           left: "13%",
           top: "40%",
-          width: "clamp(320px, 44%, 900px)",
+          width: "clamp(260px, 37%, 760px)",
           height: "auto",
-          opacity: 0.9,
+          opacity: 0.55,
           filter: "invert(1) brightness(0.88)",
           pointerEvents: "none",
         }}
