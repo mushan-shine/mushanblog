@@ -27,7 +27,7 @@ export default function Banner() {
         style={{
           position: "absolute",
           left: "-24px",
-          bottom: "-12%",
+          bottom: "-20%",
           height: "140%",
           width: "auto",
           opacity: 1,
@@ -42,7 +42,7 @@ export default function Banner() {
         style={{
           position: "absolute",
           left: "13%",
-          top: "40%",
+          top: "48%",
           width: "clamp(260px, 37%, 760px)",
           height: "auto",
           opacity: 0.55,
