@@ -21,49 +21,38 @@ export default function Home() {
         fontFamily: "var(--font-caveat)",
       }}
     >
-      {/* Hero：左文字 + 右侧（优势卡片 + 小猫） */}
-      <div className="flex items-start justify-center px-6 md:px-16 pt-3 pb-6">
-        <div className="w-full flex flex-col gap-6" style={{ maxWidth: "960px" }}>
+      {/* Hero：左（标题 + 小猫） / 右（按钮·状态 + 四条卡片） */}
+      <div className="flex items-start justify-center px-6 md:px-16 pt-5 pb-6">
+        <div className="w-full flex flex-col md:flex-row gap-10 md:gap-16" style={{ maxWidth: "960px" }}>
 
-          {/* 顶部：左头像 + 右（标题 / 状态 / 按钮） */}
-          <div className="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-12">
-            {/* 头像 */}
-            <div className="rounded-full overflow-hidden flex-shrink-0" style={{ width: "112px", height: "112px", border: "2px solid rgba(255,255,255,0.7)", boxShadow: "0 4px 16px rgba(0,0,0,0.12)" }}>
-              <Image src="/avatar.jpg" alt="木杉" width={224} height={224} priority className="object-cover w-full h-full" />
+          {/* 左列：标题（上） + 小猫（下） */}
+          <div className="flex flex-col gap-3 flex-shrink-0">
+            <Image
+              src="/hero-title.png"
+              alt="Hi, 我是木杉"
+              width={1053}
+              height={175}
+              priority
+              style={{ width: "clamp(190px, 27vw, 300px)", height: "auto", maxWidth: "100%" }}
+            />
+
+            {/* 状态 + 社交 */}
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className="inline-flex items-center gap-2" style={{ fontSize: "12px", color: "#7a766e", border: "1.5px solid #d0cdc4", borderRadius: "20px", padding: "4px 14px", background: "rgba(255,255,255,0.6)" }}>
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
+                开放机会 · AI 技术销售
+              </div>
+              <a href="mailto:mushan.ysl@gmail.com" title="发邮件" style={{ fontSize: "18px", color: "#8c887f", lineHeight: 1 }}>✉</a>
+              <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener noreferrer" title="小红书" style={{ fontSize: "16px", lineHeight: 1 }}>📕</a>
             </div>
 
-            {/* 右侧信息 */}
-            <div className="flex-1 flex flex-col gap-5 items-start">
-              {/* 标题图片：用宽度控制、高度自适应，保持原始比例不压扁 */}
-              <Image
-                src="/hero-title.png"
-                alt="Hi, 我是木杉"
-                width={1053}
-                height={175}
-                priority
-                style={{ width: "clamp(220px, 34vw, 380px)", height: "auto", maxWidth: "100%" }}
-              />
-
-              {/* 状态 + 社交 + 按钮 同一排 */}
-              <div className="flex items-center gap-3 flex-wrap">
-                <div className="inline-flex items-center gap-2" style={{ fontSize: "12px", color: "#7a766e", border: "1.5px solid #d0cdc4", borderRadius: "20px", padding: "4px 14px", background: "rgba(255,255,255,0.6)" }}>
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
-                  开放机会 · AI 技术销售
-                </div>
-                <a href="mailto:mushan.ysl@gmail.com" title="发邮件" style={{ fontSize: "18px", color: "#8c887f", lineHeight: 1 }}>✉</a>
-                <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener noreferrer" title="小红书" style={{ fontSize: "16px", lineHeight: 1 }}>📕</a>
-                <Link href="/about" style={{ fontSize: "14px", padding: "8px 22px", background: "rgba(44,44,44,0.85)", color: "#fff", borderRadius: "6px", boxShadow: "2px 2px 0 rgba(44,44,44,0.2)", display: "inline-block" }}>
-                  关于我 →
-                </Link>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", padding: "8px 22px", background: "rgba(255,255,255,0.7)", color: "#2c2c2c", border: "1.5px solid rgba(44,44,44,0.2)", borderRadius: "6px", display: "inline-block" }}>
-                  个人简历
-                </a>
-              </div>
+            <div className="hidden md:flex items-center justify-center overflow-hidden" style={{ width: "clamp(160px, 20vw, 220px)", height: "clamp(160px, 20vw, 220px)", marginTop: "-32px" }}>
+              <Image src="/cat-nobg.gif" alt="" width={220} height={220} unoptimized className="object-contain w-full h-full" />
             </div>
           </div>
 
-          {/* 底部：优势卡片 + 小猫 */}
-          <div className="flex flex-col md:flex-row items-start justify-between gap-8">
+          {/* 右列：四条卡片 */}
+          <div className="flex-1 flex flex-col justify-center">
             <div className="flex flex-col gap-2" style={{ fontFamily: "var(--font-geist-sans)", width: "fit-content", maxWidth: "100%" }}>
               {strengths.map((s) => (
                 <div key={s.title} className="flex items-baseline gap-2.5 whitespace-nowrap" style={{ padding: "2px 0" }}>
@@ -72,10 +61,6 @@ export default function Home() {
                   <span style={{ fontSize: "15px", color: "#8c887f" }}>— {s.desc}</span>
                 </div>
               ))}
-            </div>
-
-            <div className="flex-shrink-0 hidden md:flex items-center justify-center overflow-hidden" style={{ width: "clamp(150px, 18vw, 200px)", height: "clamp(150px, 18vw, 200px)", marginTop: "-48px" }}>
-              <Image src="/cat-nobg.gif" alt="" width={200} height={200} unoptimized className="object-contain w-full h-full" />
             </div>
           </div>
         </div>
