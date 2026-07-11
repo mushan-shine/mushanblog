@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllCases, getCaseBySlug } from "@/lib/cases";
+import ArticleView from "@/components/ArticleView";
 
 export function generateStaticParams() {
   // 只为没有外链的案例生成详情页
@@ -22,7 +23,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   if (!item) notFound();
 
   return (
-    <div className="max-w-[760px] mx-auto px-6">
+    <div className="max-w-[960px] mx-auto px-6">
       <div className="pt-8 pb-3">
         <Link href="/portfolio" className="text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
           ← 返回案例
@@ -36,9 +37,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
           {item.date ? ` · ${item.date}` : ""}
         </p>
       </div>
-      <article className="bg-white rounded-xl border border-neutral-200/80 p-8 mb-24 article-content">
-        <div dangerouslySetInnerHTML={{ __html: item.contentHtml }} />
-      </article>
+      <ArticleView contentHtml={item.contentHtml} pdf={item.pdf} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import ArticleView from "@/components/ArticleView";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -19,7 +20,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
 
   return (
-    <div className="max-w-[760px] mx-auto px-6">
+    <div className="max-w-[960px] mx-auto px-6">
       <div className="pt-8 pb-3">
         <Link href="/insights" className="text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
           ← 返回列表
@@ -32,9 +33,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           {post.date ? ` · ${post.date}` : ""}
         </p>
       </div>
-      <article className="bg-white rounded-xl border border-neutral-200/80 p-8 mb-24 article-content">
-        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-      </article>
+      <ArticleView contentHtml={post.contentHtml} pdf={post.pdf} />
     </div>
   );
 }

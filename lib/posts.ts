@@ -15,6 +15,7 @@ export interface PostMeta {
 
 export interface Post extends PostMeta {
   contentHtml: string;
+  pdf?: string; // 对应的 PDF 手稿路径（在 public 下），如 /manuscripts/xxx.pdf
 }
 
 function readMeta(file: string): PostMeta {
@@ -50,5 +51,14 @@ export function getPostBySlug(slug: string): Post | null {
     desc: data.desc ? String(data.desc) : "",
     date: data.date ? String(data.date) : "",
     contentHtml: marked.parse(content) as string,
+    pdf: resolvePdf(slug, data.pdf),
   };
+}
+
+// 手稿 PDF 约定：public/manuscripts/<slug>.pdf 自动识别；也可用 frontmatter 的 pdf 字段显式指定
+function resolvePdf(slug: string, explicit: unknown): string | undefined {
+  if (explicit) return String(explicit);
+  const rel = `/manuscripts/${slug}.pdf`;
+  const abs = path.join(process.cwd(), "public", rel);
+  return fs.existsSync(abs) ? rel : undefined;
 }
