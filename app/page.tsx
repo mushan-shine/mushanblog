@@ -11,9 +11,10 @@ const strengths = [
 export default function Home() {
   return (
     <div
-      className="flex flex-col"
+      className="flex flex-col justify-center"
       style={{
-        minHeight: "calc(100vh - 38vh - 56px - 40px)",
+        height: "calc(100vh - 38vh - 56px - 40px)",
+        overflow: "hidden",
         background: "#f2f2f0",
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
@@ -23,7 +24,7 @@ export default function Home() {
     >
       {/* Hero：左（标题 + 小猫） / 右（按钮·状态 + 四条卡片） */}
       <div className="flex items-start justify-center px-6 md:px-16 pt-5 pb-6">
-        <div className="w-full flex flex-col md:flex-row gap-10 md:gap-16" style={{ maxWidth: "960px" }}>
+        <div className="w-full flex flex-col md:flex-row gap-10 md:gap-16" style={{ maxWidth: "960px", marginTop: "44px" }}>
 
           {/* 左列：标题（上） + 小猫（下） */}
           <div className="flex flex-col gap-3 flex-shrink-0">
@@ -46,8 +47,8 @@ export default function Home() {
               <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener noreferrer" title="小红书" style={{ fontSize: "16px", lineHeight: 1 }}>📕</a>
             </div>
 
-            <div className="hidden md:flex items-center justify-center overflow-hidden" style={{ width: "clamp(160px, 20vw, 220px)", height: "clamp(160px, 20vw, 220px)", marginTop: "-32px" }}>
-              <Image src="/cat-nobg.gif" alt="" width={220} height={220} unoptimized className="object-contain w-full h-full" />
+            <div className="hidden md:flex items-center justify-center overflow-hidden" style={{ width: "clamp(130px, 15vw, 170px)", height: "clamp(130px, 15vw, 170px)", marginTop: "-24px" }}>
+              <Image src="/cat-nobg.gif" alt="" width={170} height={170} unoptimized className="object-contain w-full h-full" />
             </div>
           </div>
 
