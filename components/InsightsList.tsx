@@ -2,6 +2,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { PostMeta } from "@/lib/posts";
+import Pager from "@/components/Pager";
+
+const PAGE_SIZE = 10;
 
 const categories = ["全部", "Sales × AI", "产品拆解", "AI 学习", "方法论"];
 
@@ -14,7 +17,11 @@ const categoryColor: Record<string, string> = {
 
 export default function InsightsList({ posts }: { posts: PostMeta[] }) {
   const [active, setActive] = useState("全部");
+  const [page, setPage] = useState(1);
   const filtered = active === "全部" ? posts : posts.filter((p) => p.category === active);
+  const pageCount = Math.ceil(filtered.length / PAGE_SIZE);
+  const current = Math.min(page, pageCount || 1);
+  const shown = filtered.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE);
 
   return (
     <>
@@ -22,7 +29,10 @@ export default function InsightsList({ posts }: { posts: PostMeta[] }) {
         {categories.map((c) => (
           <button
             key={c}
-            onClick={() => setActive(c)}
+            onClick={() => {
+              setActive(c);
+              setPage(1);
+            }}
             className="text-xs px-3.5 py-1.5 rounded-full whitespace-nowrap transition-all cursor-pointer"
             style={{
               border: `1px solid ${active === c ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.3)"}`,
@@ -34,11 +44,11 @@ export default function InsightsList({ posts }: { posts: PostMeta[] }) {
           </button>
         ))}
       </div>
-      <section className="pb-24 flex flex-col gap-3">
+      <section className="pb-8 flex flex-col gap-3">
         {filtered.length === 0 && (
           <p className="text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>暂无文章。</p>
         )}
-        {filtered.map((p) => (
+        {shown.map((p) => (
           <Link key={p.slug} href={`/insights/${p.slug}`} className="group bg-white rounded-xl border border-neutral-200/80 p-4 hover:border-neutral-300 hover:shadow-sm transition-all block">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
@@ -51,6 +61,7 @@ export default function InsightsList({ posts }: { posts: PostMeta[] }) {
           </Link>
         ))}
       </section>
+      <Pager page={current} pageCount={pageCount} onChange={setPage} />
     </>
   );
 }
