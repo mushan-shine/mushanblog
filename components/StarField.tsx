@@ -87,7 +87,7 @@ export default function StarField() {
     const FRAME = 1000 / 30; // 限制 ~30fps 降低重绘负担
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    function seed() {
+    const seed = () => {
       W = wrap.clientWidth;
       H = wrap.clientHeight;
       canvas.width = W * dpr;
@@ -128,9 +128,9 @@ export default function StarField() {
         });
       }
       starsRef.current = stars;
-    }
+    };
 
-    function drawNebula() {
+    const drawNebula = () => {
       // 柔和的银河光带
       ctx.save();
       ctx.translate(W * 0.5, H * 0.5);
@@ -142,9 +142,9 @@ export default function StarField() {
       ctx.fillStyle = grad;
       ctx.fillRect(-Math.hypot(W, H) / 2, -H * 0.32, Math.hypot(W, H), H * 0.64);
       ctx.restore();
-    }
+    };
 
-    function draw(t: number) {
+    const draw = (t: number) => {
       raf = requestAnimationFrame(draw);
       if (t - last < FRAME) return;
       last = t;
@@ -164,7 +164,7 @@ export default function StarField() {
         ctx.fillStyle = `rgba(255,255,255,${a})`;
         ctx.fill();
       }
-    }
+    };
 
     seed();
     raf = requestAnimationFrame(draw);
