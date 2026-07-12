@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ContactChips from "@/components/ContactChips";
 
 const strengths = [
   { icon: "⌥", title: "技术背景，能谈细节", desc: "2 年研发，能跟客户工程师对话，不被技术问题问住。" },
@@ -43,8 +44,7 @@ export default function Home() {
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
                 开放机会 · AI 技术销售
               </div>
-              <a href="mailto:mushan.ysl@gmail.com" title="发邮件" style={{ fontSize: "18px", color: "#8c887f", lineHeight: 1 }}>✉</a>
-              <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener noreferrer" title="小红书" style={{ fontSize: "16px", lineHeight: 1 }}>📕</a>
+              <ContactChips />
             </div>
 
             <div className="hidden md:flex items-center justify-center overflow-hidden" style={{ width: "clamp(130px, 15vw, 170px)", height: "clamp(130px, 15vw, 170px)", marginTop: "-24px" }}>
