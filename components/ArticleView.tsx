@@ -7,7 +7,10 @@ const PDFJS_SRC = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VER}/pd
 const PDFJS_WORKER = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VER}/pdf.worker.min.mjs`;
 
 export default function ArticleView({ contentHtml, pdf }: { contentHtml: string; pdf?: string }) {
-  const [view, setView] = useState<"text" | "pdf">("text");
+  // 是否有正文（去掉标签后是否还有内容）
+  const hasText = contentHtml.replace(/<[^>]*>/g, "").trim().length > 0;
+  // 只有手稿时默认显示手稿
+  const [view, setView] = useState<"text" | "pdf">(hasText ? "text" : "pdf");
   const [loading, setLoading] = useState(false);
   const pagesRef = useRef<HTMLDivElement>(null);
   const renderedRef = useRef(false);
@@ -60,7 +63,7 @@ export default function ArticleView({ contentHtml, pdf }: { contentHtml: string;
 
   return (
     <div className="mb-24">
-      {pdf && (
+      {pdf && hasText && (
         <div className="flex gap-2 mb-3">
           {(["text", "pdf"] as const).map((v) => (
             <button
@@ -83,7 +86,7 @@ export default function ArticleView({ contentHtml, pdf }: { contentHtml: string;
       <article
         className="article-content"
         style={{
-          display: view === "text" || !pdf ? "block" : "none",
+          display: hasText && view === "text" ? "block" : "none",
           background: "#fdfcfa",
           border: "1px solid rgba(0,0,0,0.06)",
           borderRadius: "16px",
