@@ -6,6 +6,24 @@ const PDFJS_VER = "4.7.76";
 const PDFJS_SRC = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VER}/pdf.min.mjs`;
 const PDFJS_WORKER = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VER}/pdf.worker.min.mjs`;
 
+// pdf.js 运行时最小类型（仅覆盖用到的部分）
+interface PdfViewport {
+  width: number;
+  height: number;
+}
+interface PdfPage {
+  getViewport: (opts: { scale: number }) => PdfViewport;
+  render: (opts: { canvasContext: CanvasRenderingContext2D | null; viewport: PdfViewport }) => { promise: Promise<void> };
+}
+interface PdfDoc {
+  numPages: number;
+  getPage: (n: number) => Promise<PdfPage>;
+}
+interface PdfJs {
+  GlobalWorkerOptions: { workerSrc: string };
+  getDocument: (src: string) => { promise: Promise<PdfDoc> };
+}
+
 export default function ArticleView({ contentHtml, pdf }: { contentHtml: string; pdf?: string }) {
   // 是否有正文（去掉标签后是否还有内容）
   const hasText = contentHtml.replace(/<[^>]*>/g, "").trim().length > 0;
@@ -24,8 +42,9 @@ export default function ArticleView({ contentHtml, pdf }: { contentHtml: string;
     (async () => {
       try {
         setLoading(true);
-        // @ts-expect-error 远程 ESM 动态导入
-        const pdfjsLib = await import(/* webpackIgnore: true */ PDFJS_SRC);
+        // 用 Function 包一层，绕开打包器/TS 对远程 ESM URL 的静态分析
+        const dynamicImport = new Function("u", "return import(u)") as (u: string) => Promise<PdfJs>;
+        const pdfjsLib = await dynamicImport(PDFJS_SRC);
         pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;
         const doc = await pdfjsLib.getDocument(pdf).promise;
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
