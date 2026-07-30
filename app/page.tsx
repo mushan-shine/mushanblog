@@ -17,9 +17,6 @@ export default function Home() {
         height: "calc(100vh - 38vh - 56px - 40px)",
         overflow: "hidden",
         background: "#f2f2f0",
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
-        backgroundSize: "48px 48px",
         fontFamily: "var(--font-caveat)",
       }}
     >
