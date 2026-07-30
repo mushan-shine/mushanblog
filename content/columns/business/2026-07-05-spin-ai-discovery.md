@@ -1,6 +1,5 @@
 ---
 title: "用 SPIN 拆解一次 AI 大模型的客户发现对话"
-category: "Sales × AI"
 desc: "SPIN 提问法如何在 AI 产品销售中落地？用一个虚构的客户对话来实战演练。"
 date: "2026-07-05"
 ---

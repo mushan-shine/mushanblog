@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { COLUMNS } from "@/lib/columns";
 
 const links = [
-  { href: "/portfolio", label: "案例" },
-  { href: "/insights", label: "思考" },
+  ...COLUMNS.map((c) => ({ href: `/${c.slug}`, label: c.label })),
   { href: "/thoughts", label: "日常感叹" },
   { href: "/about", label: "关于我" },
 ];

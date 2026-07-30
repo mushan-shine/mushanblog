@@ -2,32 +2,37 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { ColumnKey } from "./columns";
 
-const casesDir = path.join(process.cwd(), "content/cases");
-
-export interface CaseMeta {
+export interface ArticleMeta {
   slug: string;
+  column: ColumnKey;
   title: string;
-  tag: string;
+  subtag?: string; // 细分标签，如 服务器/云计算/大模型/网络/存储（仅技术学习栏目常用）
   desc: string;
-  status: string;
+  status?: string;
   date: string;
   href?: string; // 若填了外链，卡片直接跳这里，不进详情页
 }
 
-export interface CaseItem extends CaseMeta {
+export interface Article extends ArticleMeta {
   contentHtml: string;
   pdf?: string; // 对应的 PDF 手稿路径（在 public 下）
 }
 
-function readMeta(file: string): CaseMeta {
+function contentDir(column: ColumnKey) {
+  return path.join(process.cwd(), "content/columns", column);
+}
+
+function readMeta(column: ColumnKey, file: string): ArticleMeta {
   const slug = file.replace(/\.md$/, "");
-  const raw = fs.readFileSync(path.join(casesDir, file), "utf8");
+  const raw = fs.readFileSync(path.join(contentDir(column), file), "utf8");
   const { data } = matter(raw);
   return {
     slug,
+    column,
     title: data.title ? String(data.title) : slug,
-    tag: data.tag ? String(data.tag) : "案例",
+    subtag: data.subtag ? String(data.subtag) : undefined,
     desc: data.desc ? String(data.desc) : "",
     status: data.status ? String(data.status) : "",
     date: data.date ? String(data.date) : "",
@@ -35,24 +40,26 @@ function readMeta(file: string): CaseMeta {
   };
 }
 
-export function getAllCases(): CaseMeta[] {
-  if (!fs.existsSync(casesDir)) return [];
+export function getArticles(column: ColumnKey): ArticleMeta[] {
+  const dir = contentDir(column);
+  if (!fs.existsSync(dir)) return [];
   return fs
-    .readdirSync(casesDir)
+    .readdirSync(dir)
     .filter((f) => f.endsWith(".md"))
-    .map(readMeta)
+    .map((f) => readMeta(column, f))
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getCaseBySlug(slug: string): CaseItem | null {
-  const file = path.join(casesDir, `${slug}.md`);
+export function getArticleBySlug(column: ColumnKey, slug: string): Article | null {
+  const file = path.join(contentDir(column), `${slug}.md`);
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   return {
     slug,
+    column,
     title: data.title ? String(data.title) : slug,
-    tag: data.tag ? String(data.tag) : "案例",
+    subtag: data.subtag ? String(data.subtag) : undefined,
     desc: data.desc ? String(data.desc) : "",
     status: data.status ? String(data.status) : "",
     date: data.date ? String(data.date) : "",

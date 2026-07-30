@@ -32,10 +32,19 @@ export default function ArticleView({ contentHtml, pdf }: { contentHtml: string;
   const [loading, setLoading] = useState(false);
   const pagesRef = useRef<HTMLDivElement>(null);
   const renderedRef = useRef(false);
+  // 用递增的"世代"号代替单一 cancelled 布尔值：
+  // React 18 StrictMode 下 effect 会挂载→卸载→再挂载两次，
+  // 若只用 cancelled 标记，先跑的那次可能在被取消后仍执行到
+  // container.innerHTML = "" 才检测到取消，从而把后一次已经渲染好的
+  // 第 1 页清掉，导致页面看起来"手稿前面部分被截断"。
+  // 这里让每次 effect 运行都领取一个唯一世代号，只有当前最新世代
+  // 才允许写 DOM，过期的世代在每个 await 之后立即退出、不做任何清空/写入。
+  const genRef = useRef(0);
 
   useEffect(() => {
     if (view !== "pdf" || !pdf || renderedRef.current) return;
-    let cancelled = false;
+    const myGen = ++genRef.current;
+    const isStale = () => genRef.current !== myGen;
     const container = pagesRef.current;
     if (!container) return;
 
@@ -45,13 +54,16 @@ export default function ArticleView({ contentHtml, pdf }: { contentHtml: string;
         // 用 Function 包一层，绕开打包器/TS 对远程 ESM URL 的静态分析
         const dynamicImport = new Function("u", "return import(u)") as (u: string) => Promise<PdfJs>;
         const pdfjsLib = await dynamicImport(PDFJS_SRC);
+        if (isStale()) return;
         pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;
         const doc = await pdfjsLib.getDocument(pdf).promise;
+        if (isStale()) return;
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
         container.innerHTML = "";
         for (let i = 1; i <= doc.numPages; i++) {
-          if (cancelled) return;
+          if (isStale()) return;
           const page = await doc.getPage(i);
+          if (isStale()) return;
           const viewport = page.getViewport({ scale: 1.6 * dpr });
           const canvas = document.createElement("canvas");
           canvas.width = viewport.width;
@@ -61,23 +73,20 @@ export default function ArticleView({ contentHtml, pdf }: { contentHtml: string;
           canvas.style.display = "block";
           container.appendChild(canvas);
           await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+          if (isStale()) return;
         }
         renderedRef.current = true;
       } catch {
-        if (container) {
+        if (!isStale() && container) {
           container.innerHTML =
             '<p style="padding:2rem;color:#888;text-align:center;font-size:14px">手稿加载失败，可 <a href="' +
             pdf +
             '" target="_blank" style="color:#2563eb;text-decoration:underline">点此在新标签打开 PDF</a></p>';
         }
       } finally {
-        if (!cancelled) setLoading(false);
+        if (!isStale()) setLoading(false);
       }
     })();
-
-    return () => {
-      cancelled = true;
-    };
   }, [view, pdf]);
 
   return (
