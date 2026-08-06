@@ -1,0 +1,57 @@
+<svg viewBox="-26.0 -5.8 887.9 622.8" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="230.0" y="53.0" width="260.0" height="62.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="230.0" y="173.0" width="260.0" height="62.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="230.0" y="293.0" width="260.0" height="62.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="230.0" y="413.0" width="260.0" height="62.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="230.0" y="533.0" width="260.0" height="62.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="360.0" y1="119.0" x2="360.0" y2="169.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="360.0" y1="239.0" x2="360.0" y2="289.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="360.0" y1="359.0" x2="360.0" y2="409.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="360.0" y1="479.0" x2="360.0" y2="529.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<text x="470.0" y="36.5" fill="#23201c" font-size="22" font-weight="600" text-anchor="middle">
+<tspan x="470.0" dy="0.0">服务器的进化史：一路被痛点逼出来</tspan>
+</text>
+<text x="360.0" y="90.2" fill="#23201c" font-size="21" font-weight="400" text-anchor="middle">
+<tspan x="360.0" dy="0.0">物理机</tspan>
+</text>
+<text x="524.0" y="87.8" fill="#8c887f" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="524.0" dy="0.0">痛点：资源浪费 + 环境冲突 + 部署慢</tspan>
+</text>
+<text x="360.0" y="210.2" fill="#23201c" font-size="21" font-weight="400" text-anchor="middle">
+<tspan x="360.0" dy="0.0">虚拟机</tspan>
+</text>
+<text x="524.0" y="207.8" fill="#8c887f" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="524.0" dy="0.0">痛点：每台 VM 都带完整 OS，重、慢、密度低</tspan>
+</text>
+<text x="360.0" y="330.2" fill="#23201c" font-size="21" font-weight="400" text-anchor="middle">
+<tspan x="360.0" dy="0.0">容器</tspan>
+</text>
+<text x="524.0" y="327.8" fill="#8c887f" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="524.0" dy="0.0">痛点：成百个容器难放置、难重启、难发现</tspan>
+</text>
+<text x="360.0" y="450.2" fill="#23201c" font-size="21" font-weight="400" text-anchor="middle">
+<tspan x="360.0" dy="0.0">Kubernetes (k8s)</tspan>
+</text>
+<text x="524.0" y="447.8" fill="#8c887f" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="524.0" dy="0.0">集群级调度与自愈</tspan>
+</text>
+<text x="360.0" y="570.2" fill="#23201c" font-size="21" font-weight="400" text-anchor="middle">
+<tspan x="360.0" dy="0.0">云平台</tspan>
+</text>
+<text x="524.0" y="567.8" fill="#8c887f" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="524.0" dy="0.0">弹性、便宜、免运维的资源池</tspan>
+</text>
+<text x="80.0" y="147.9" fill="#8c887f" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="80.0" dy="0.0">方案：把硬件虚拟化</tspan>
+</text>
+<text x="-4.0" y="267.9" fill="#8c887f" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="-4.0" dy="0.0">方案：共享内核、只隔离进程视图</tspan>
+</text>
+<text x="38.0" y="387.9" fill="#8c887f" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="38.0" dy="0.0">方案：集群调度器统一编排</tspan>
+</text>
+<text x="24.0" y="507.9" fill="#8c887f" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="24.0" dy="0.0">方案：把基础设施池化为服务</tspan>
+</text>
+</svg>

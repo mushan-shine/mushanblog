@@ -69,3 +69,76 @@ body {
 }
 .article-content pre code { background: none; padding: 0; }
 .article-content img { max-width: 100%; border-radius: 8px; margin: 1.2em 0; }
+
+/* 正文排版：首行缩进 2 字 + 两端对齐 + 稍紧的行距 */
+.article-content { font-size: 16.5px; line-height: 1.75; }
+.article-content p {
+  text-indent: 2em;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+/* 一页速记等代码块：保持单层浅底、行距舒适（等宽保证箭头对齐） */
+.article-content pre { line-height: 1.7; font-size: 13px; }
+ 
+/* callout 提示框（摘要 / 定位 / 一通百通 / 下一站 等） */
+.article-content .callout {
+  --c: #8a94a0;
+  margin: 1.6em 0;
+  padding: 13px 17px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--c);
+  border-radius: 12px;
+  background: #ffffff;
+}
+.article-content .callout-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
+  color: var(--c);
+  margin-bottom: 4px;
+  text-indent: 0;
+}
+.article-content .callout-content > :first-child { margin-top: 0; }
+.article-content .callout-content > :last-child { margin-bottom: 0; }
+.article-content .callout-content p { text-indent: 0; }  /* 框内不缩进更清爽 */
+/* 摘要：浅灰框，不显示标题（md 里不写标题文字即可） */
+.article-content .callout[data-callout="abstract"] { --c: #9aa3ad; background: #f5f6f7; }
+/* 一页速记：蓝框；内部代码块透明，保证只有一层背景色 */
+.article-content .callout[data-callout="cheatsheet"] { --c: #2f6fd0; background: #eef4fc; }
+.article-content .callout[data-callout="cheatsheet"] pre {
+  background: transparent; border: none; padding: 0; margin: 0.4em 0;
+}
+.article-content .callout[data-callout="summary"],
+.article-content .callout[data-callout="info"] { --c: #2178b4; background: #f3f8fc; }
+.article-content .callout[data-callout="quote"],
+.article-content .callout[data-callout="cite"] { --c: #2f4be0; background: #f4f6ff; }
+.article-content .callout[data-callout="example"] { --c: #3aa66a; background: #f2fbf5; }
+.article-content .callout[data-callout="tip"],
+.article-content .callout[data-callout="hint"] { --c: #c58a1a; background: #fdf7ec; }
+.article-content .callout[data-callout="warning"] { --c: #d9822b; background: #fdf5ec; }
+ 
+/* 表格 */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.article-content th,
+.article-content td {
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  text-indent: 0;
+}
+.article-content thead th { background: #f0f2f4; font-weight: 700; }
+.article-content tbody tr:last-child td { border-bottom: 0; }
+ 
+/* 图：SVG/PNG 居中留白（覆盖上方 img 的 margin） */
+.article-content img { display: block; margin: 1.8em auto; }
+ 

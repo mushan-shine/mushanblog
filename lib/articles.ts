@@ -3,6 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import { ColumnKey } from "./columns";
+import { calloutExtension } from "./callouts";   // ← 加这行
+
+marked.use({ extensions: [calloutExtension] });   // ← 加这行（放在所有 import 下面）
 
 export interface ArticleMeta {
   slug: string;

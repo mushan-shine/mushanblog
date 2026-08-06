@@ -1,0 +1,56 @@
+<svg viewBox="48.0 -3.8 864.0 567.2" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs></defs>
+<rect x="330.0" y="60.0" width="300.0" height="76.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="152.0" width="420.0" height="76.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="200.0" y="244.0" width="560.0" height="76.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="70.0" y="356.0" width="300.0" height="148.0" rx="10" fill="#f3f1ec" stroke="#dcd8d0" stroke-width="1.4"/>
+<rect x="590.0" y="356.0" width="300.0" height="148.0" rx="10" fill="#f3f1ec" stroke="#dcd8d0" stroke-width="1.4"/>
+<text x="480.0" y="38.5" fill="#23201c" font-size="22" font-weight="600" text-anchor="middle">
+<tspan x="480.0" dy="0.0">云平台：数据中心级的操作系统</tspan>
+</text>
+<text x="480.0" y="98.3" fill="#23201c" font-size="1" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0"></tspan>
+</text>
+<text x="480.0" y="92.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0">SaaS（软件即服务）</tspan>
+</text>
+<text x="480.0" y="115.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0">提供应用服务</tspan>
+</text>
+<text x="480.0" y="190.3" fill="#23201c" font-size="1" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0"></tspan>
+</text>
+<text x="480.0" y="184.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0">PaaS（平台即服务）</tspan>
+</text>
+<text x="480.0" y="207.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0">容器平台 · 数据库 · 中间件 · DevOps</tspan>
+</text>
+<text x="480.0" y="282.3" fill="#23201c" font-size="1" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0"></tspan>
+</text>
+<text x="480.0" y="276.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0">IaaS（基础设施即服务）</tspan>
+</text>
+<text x="480.0" y="299.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="480.0" dy="0.0">计算（虚拟机/裸金属/GPU）· 存储（云硬盘/对象存储）· 网络（VPC/安全组/负载均衡）</tspan>
+</text>
+<text x="88.0" y="382.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="88.0" dy="0.0">资源管理层</tspan>
+<tspan x="88.0" dy="17.5">（让大量用户安全共享资源）</tspan>
+</text>
+<text x="88.0" y="438.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="88.0" dy="0.0">• 多租户、身份认证、权限控制</tspan>
+<tspan x="88.0" dy="16.2">• 配额管理、资源隔离、服务目录</tspan>
+</text>
+<text x="608.0" y="382.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="608.0" dy="0.0">自动化运营层</tspan>
+</text>
+<text x="608.0" y="416.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="608.0" dy="0.0">• 编排调度、自动化扩缩容</tspan>
+<tspan x="608.0" dy="16.2">• CI/CD、运维自动化、可观测性</tspan>
+</text>
+<text x="120.0" y="536.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="120.0" dy="0.0">资源池 + 资源管理 + 自动化运营 —— 共同构成一块真正可用的云平台</tspan>
+</text>
+</svg>

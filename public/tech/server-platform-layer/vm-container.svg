@@ -1,0 +1,62 @@
+<svg viewBox="38.0 -1.8 812.0 471.2" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="60.0" y="104.0" width="300.0" height="44.0" rx="10" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+<rect x="60.0" y="156.0" width="300.0" height="44.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="60.0" y="208.0" width="300.0" height="44.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="60.0" y="260.0" width="300.0" height="48.0" rx="10" fill="#e8e5df" stroke="#e8e5df" stroke-width="1"/>
+<rect x="60.0" y="316.0" width="300.0" height="44.0" rx="10" fill="#e8e5df" stroke="#e8e5df" stroke-width="1"/>
+<rect x="480.0" y="104.0" width="300.0" height="44.0" rx="10" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+<rect x="480.0" y="156.0" width="300.0" height="44.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="480.0" y="208.0" width="300.0" height="44.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="480.0" y="260.0" width="300.0" height="48.0" rx="10" fill="#e8e5df" stroke="#e8e5df" stroke-width="1"/>
+<rect x="480.0" y="316.0" width="300.0" height="44.0" rx="10" fill="#e8e5df" stroke="#e8e5df" stroke-width="1"/>
+<line x1="375.0" y1="250.0" x2="465.0" y2="250.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<text x="420.0" y="40.5" fill="#23201c" font-size="22" font-weight="600" text-anchor="middle">
+<tspan x="420.0" dy="0.0">虚拟机 vs 容器：虚拟化到哪一层</tspan>
+</text>
+<text x="210.0" y="83.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="210.0" dy="0.0">虚拟机 · 虚拟化「硬件」</tspan>
+</text>
+<text x="210.0" y="130.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="210.0" dy="0.0">应用      应用</tspan>
+</text>
+<text x="210.0" y="182.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="210.0" dy="0.0">Guest OS   Guest OS</tspan>
+</text>
+<text x="210.0" y="234.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="210.0" dy="0.0">VM          VM</tspan>
+</text>
+<text x="210.0" y="288.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="210.0" dy="0.0">Hypervisor（隔离硬件）</tspan>
+</text>
+<text x="210.0" y="342.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="210.0" dy="0.0">硬件</tspan>
+</text>
+<text x="630.0" y="83.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="630.0" dy="0.0">容器 · 虚拟化「操作系统」</tspan>
+</text>
+<text x="630.0" y="130.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="630.0" dy="0.0">应用      应用</tspan>
+</text>
+<text x="630.0" y="182.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="630.0" dy="0.0">docker    docker</tspan>
+</text>
+<text x="630.0" y="234.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="630.0" dy="0.0">容器运行时</tspan>
+</text>
+<text x="630.0" y="288.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="630.0" dy="0.0">共享内核</tspan>
+</text>
+<text x="630.0" y="342.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="630.0" dy="0.0">硬件</tspan>
+</text>
+<text x="420.0" y="234.4" fill="#8c887f" font-size="15" font-weight="400" text-anchor="middle">
+<tspan x="420.0" dy="0.0">变轻</tspan>
+</text>
+<text x="60.0" y="442.9" fill="#8c887f" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="60.0" dy="0.0">重量：每台 VM 一个完整 OS，启动慢、占用大</tspan>
+</text>
+<text x="480.0" y="442.9" fill="#8c887f" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="480.0" dy="0.0">本质：namespace（视图隔离）+ cgroup（资源限制）</tspan>
+</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="48.0 8.0 884.0 421.0" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="70.0" y="40.0" width="120.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="250.0" y="40.0" width="120.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="430.0" y="40.0" width="120.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="610.0" y="40.0" width="120.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="790.0" y="40.0" width="120.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="70.0" y="161.0" width="92.0" height="38.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="70.0" y="213.0" width="92.0" height="38.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="70.0" y="265.0" width="92.0" height="38.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="70.0" y="369.0" width="92.0" height="38.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="198.0" y1="65.0" x2="242.0" y2="65.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="378.0" y1="65.0" x2="422.0" y2="65.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="558.0" y1="65.0" x2="602.0" y2="65.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="738.0" y1="65.0" x2="782.0" y2="65.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="70.0" y1="134.0" x2="870.0" y2="134.0" stroke="#eeece7" stroke-width="1.4" stroke-linecap="round"/>
+<text x="130.0" y="70.6" fill="#23201c" font-size="19" font-weight="400" text-anchor="middle">
+<tspan x="130.0" dy="0.0">物理机</tspan>
+</text>
+<text x="310.0" y="70.6" fill="#23201c" font-size="19" font-weight="400" text-anchor="middle">
+<tspan x="310.0" dy="0.0">虚拟机</tspan>
+</text>
+<text x="490.0" y="70.6" fill="#23201c" font-size="19" font-weight="400" text-anchor="middle">
+<tspan x="490.0" dy="0.0">容器</tspan>
+</text>
+<text x="670.0" y="70.6" fill="#23201c" font-size="19" font-weight="400" text-anchor="middle">
+<tspan x="670.0" dy="0.0">k8s</tspan>
+</text>
+<text x="850.0" y="70.6" fill="#23201c" font-size="19" font-weight="400" text-anchor="middle">
+<tspan x="850.0" dy="0.0">云平台</tspan>
+</text>
+<text x="220.0" y="41.0" fill="#23201c" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="220.0" dy="0.0">把硬件</tspan>
+<tspan x="220.0" dy="15.0">虚拟化</tspan>
+</text>
+<text x="400.0" y="41.0" fill="#23201c" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="400.0" dy="0.0">共享</tspan>
+<tspan x="400.0" dy="15.0">内核</tspan>
+</text>
+<text x="580.0" y="41.0" fill="#23201c" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="580.0" dy="0.0">集群</tspan>
+<tspan x="580.0" dy="15.0">调度</tspan>
+</text>
+<text x="760.0" y="41.0" fill="#23201c" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="760.0" dy="0.0">池化+</tspan>
+<tspan x="760.0" dy="15.0">免运维</tspan>
+</text>
+<text x="470.0" y="111.8" fill="#23201c" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="470.0" dy="0.0">每一步都被上一步的痛点逼出来</tspan>
+</text>
+<text x="116.0" y="184.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="116.0" dy="0.0">虚拟机</tspan>
+</text>
+<text x="184.0" y="183.8" fill="#23201c" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="184.0" dy="0.0">Hypervisor 隔离硬件；三处虚拟化：CPU / 内存 / IO</tspan>
+</text>
+<text x="116.0" y="236.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="116.0" dy="0.0">容器</tspan>
+</text>
+<text x="184.0" y="235.8" fill="#23201c" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="184.0" dy="0.0">namespace(隔离视图) + cgroup(限资源) + overlayFS(镜像分层)</tspan>
+</text>
+<text x="116.0" y="288.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="116.0" dy="0.0">k8s</tspan>
+</text>
+<text x="184.0" y="287.8" fill="#23201c" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="184.0" dy="0.0">声明式调和：期望状态 → API Server/etcd → 纠偏 → kubelet 落地</tspan>
+</text>
+<text x="184.0" y="339.8" fill="#23201c" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="184.0" dy="0.0">三类可插拔接口：CRI(运行时) · CSI(存储) · CNI(网络)</tspan>
+</text>
+<text x="116.0" y="392.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="116.0" dy="0.0">云平台</tspan>
+</text>
+<text x="184.0" y="391.8" fill="#23201c" font-size="15" font-weight="400" text-anchor="start">
+<tspan x="184.0" dy="0.0">数据中心级操作系统：IaaS / PaaS / SaaS + 资源管理 + 自动化运营</tspan>
+</text>
+</svg>

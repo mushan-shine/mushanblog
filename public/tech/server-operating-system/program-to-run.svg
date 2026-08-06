@@ -1,0 +1,53 @@
+<svg viewBox="254.0 -7.8 673.0 555.8" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="280.0" y="44.0" width="300.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="280.0" y="130.0" width="300.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="280.0" y="216.0" width="300.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="280.0" y="302.0" width="300.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="280.0" y="388.0" width="300.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="280.0" y="474.0" width="300.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="430.0" y1="99.0" x2="430.0" y2="127.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="185.0" x2="430.0" y2="213.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="271.0" x2="430.0" y2="299.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="357.0" x2="430.0" y2="385.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="443.0" x2="430.0" y2="471.0" stroke="#9a978f" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<text x="430.0" y="34.5" fill="#23201c" font-size="22" font-weight="600" text-anchor="middle">
+<tspan x="430.0" dy="0.0">一份磁盘上的代码，如何跑起来</tspan>
+</text>
+<text x="430.0" y="75.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">磁盘上的程序</tspan>
+</text>
+<text x="606.0" y="73.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="606.0" dy="0.0">一堆静止的代码，不占内存/CPU</tspan>
+</text>
+<text x="430.0" y="161.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">读入内存</tspan>
+</text>
+<text x="606.0" y="159.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="606.0" dy="0.0">文件系统把裸块组织成文件，经系统调用由内核读取</tspan>
+</text>
+<text x="430.0" y="247.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">建进程 PCB</tspan>
+</text>
+<text x="606.0" y="245.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="606.0" dy="0.0">分配 PID、独立虚拟内存(页表)、登记已打开资源</tspan>
+</text>
+<text x="430.0" y="333.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">建线程 TCB</tspan>
+</text>
+<text x="606.0" y="331.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="606.0" dy="0.0">初始化运行现场：PC 设为入口地址、优先级、状态</tspan>
+</text>
+<text x="430.0" y="419.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">进就绪队列</tspan>
+</text>
+<text x="606.0" y="417.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="606.0" dy="0.0">内核选一个核心，挂到该核心就绪队列等调度</tspan>
+</text>
+<text x="430.0" y="505.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">被调度→运行态</tspan>
+</text>
+<text x="606.0" y="503.0" fill="#8c887f" font-size="13" font-weight="400" text-anchor="start">
+<tspan x="606.0" dy="0.0">MMU 换用它的页表，CPU 从入口取指执行</tspan>
+</text>
+</svg>
