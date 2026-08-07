@@ -1,0 +1,77 @@
+<svg viewBox="244.1 -17.8 759.1 758.8" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="270.0" y="45.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="123.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="201.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="279.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="357.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="435.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="513.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="591.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="270.0" y="669.0" width="320.0" height="50.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="430.0" y1="98.0" x2="430.0" y2="120.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="176.0" x2="430.0" y2="198.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="254.0" x2="430.0" y2="276.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="332.0" x2="430.0" y2="354.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="410.0" x2="430.0" y2="432.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="488.0" x2="430.0" y2="510.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="566.0" x2="430.0" y2="588.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="430.0" y1="644.0" x2="430.0" y2="666.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<text x="430.0" y="24.5" fill="#23201c" font-size="22" font-weight="600" text-anchor="middle">
+<tspan x="430.0" dy="0.0">固件的链路：从 CPU 复位到交棒</tspan>
+</text>
+<text x="430.0" y="74.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">1. CPU 通电与复位</tspan>
+</text>
+<text x="616.0" y="72.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">内部强制刷成厂商规定的初始状态，程序计数器指向复位向量</tspan>
+</text>
+<text x="430.0" y="152.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">2. 取第一条指令</tspan>
+</text>
+<text x="616.0" y="150.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">复位向量的地址被硬件线路焐死指向主板 SPI 固件芯片</tspan>
+</text>
+<text x="430.0" y="230.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">3. 借 CPU 缓存当内存</tspan>
+</text>
+<text x="616.0" y="228.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">DRAM 还不能用，固件借缓存做最早的芯片组基础设置</tspan>
+</text>
+<text x="430.0" y="308.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">4. 拉起真内存</tspan>
+</text>
+<text x="616.0" y="306.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">固件跑内存初始化，主机才有真正可用的大块内存(DRAM)</tspan>
+</text>
+<text x="430.0" y="386.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">5. POST 自检</tspan>
+</text>
+<text x="616.0" y="384.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">检查 CPU、内存、关键设备是否正常，自检码交给 BMC 独立读取</tspan>
+</text>
+<text x="430.0" y="464.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">6. 枚举并初始化设备</tspan>
+</text>
+<text x="616.0" y="462.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">遍历 PCIe 总线把网卡/RAID卡/GPU 等一个个找出来初始化</tspan>
+</text>
+<text x="430.0" y="542.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">7. 整理交接资料</tspan>
+</text>
+<text x="616.0" y="540.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">把硬件信息整理成 ACPI / SMBIOS 标准表格留给操作系统</tspan>
+</text>
+<text x="430.0" y="620.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">8. 加载引导程序</tspan>
+</text>
+<text x="616.0" y="618.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">按启动顺序找到启动设备，读取该设备上的引导程序</tspan>
+</text>
+<text x="430.0" y="698.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">9. 交棒退场</tspan>
+</text>
+<text x="616.0" y="696.5" fill="#8c887f" font-size="12.5" font-weight="400" text-anchor="start">
+<tspan x="616.0" dy="0.0">把 bootloader 加载起来并移交控制权，固件主体任务结束</tspan>
+</text>
+</svg>

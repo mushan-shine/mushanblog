@@ -1,0 +1,42 @@
+<svg viewBox="3.0 -18.5 859.0 434.6" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="25.0" y="140.0" width="170.0" height="100.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="330.0" y="68.0" width="200.0" height="56.0" rx="10" fill="#e8e5df" stroke="#e8e5df" stroke-width="1"/>
+<rect x="620.0" y="68.0" width="220.0" height="56.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="330.0" y="292.0" width="200.0" height="56.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="620.0" y="292.0" width="220.0" height="56.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="201.0" y1="168.0" x2="330.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="530.0" y1="96.0" x2="606.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="201.0" y1="212.0" x2="330.0" y2="320.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="530.0" y1="320.0" x2="606.0" y2="320.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<text x="430.0" y="21.9" fill="#23201c" font-size="20" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">通电 ≠ 能干活：服务器电源的两路分工</tspan>
+</text>
+<text x="110.0" y="184.7" fill="#23201c" font-size="16" font-weight="400" text-anchor="middle">
+<tspan x="110.0" dy="0.0">电源线插上</tspan>
+<tspan x="110.0" dy="20.0">接市电</tspan>
+</text>
+<text x="430.0" y="47.8" fill="#8c887f" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">常通，不受开关机键控制</tspan>
+</text>
+<text x="430.0" y="101.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">待机电源</tspan>
+</text>
+<text x="730.0" y="91.4" fill="#23201c" font-size="14" font-weight="400" text-anchor="middle">
+<tspan x="730.0" dy="0.0">BMC 等小部件</tspan>
+<tspan x="730.0" dy="17.5">持续醒着</tspan>
+</text>
+<text x="430.0" y="269.8" fill="#8c887f" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">默认关闭，由 PWR_ON 信号决定通不通</tspan>
+</text>
+<text x="430.0" y="325.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">主电源</tspan>
+</text>
+<text x="730.0" y="315.4" fill="#23201c" font-size="14" font-weight="400" text-anchor="middle">
+<tspan x="730.0" dy="0.0">CPU / 内存 / 硬盘</tspan>
+<tspan x="730.0" dy="17.5">显卡等大件通电</tspan>
+</text>
+<text x="430.0" y="389.8" fill="#8c887f" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">只有 PWR_ON 信号被拉动，主机大件才真正通电、CPU 才开始复位</tspan>
+</text>
+</svg>

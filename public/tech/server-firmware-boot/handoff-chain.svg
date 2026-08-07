@@ -1,0 +1,42 @@
+<svg viewBox="-2.0 -17.1 868.1 291.2" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="20.0" y="60.0" width="220.0" height="60.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="320.0" y="60.0" width="220.0" height="60.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="620.0" y="60.0" width="220.0" height="60.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="250.0" y1="90.0" x2="320.0" y2="90.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="550.0" y1="90.0" x2="620.0" y2="90.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<text x="430.0" y="24.2" fill="#23201c" font-size="21" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">交棒三级链条：固件 → bootloader → 内核</tspan>
+</text>
+<text x="130.0" y="84.1" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="130.0" dy="0.0">固件</tspan>
+<tspan x="130.0" dy="22.5">(UEFI)</tspan>
+</text>
+<text x="430.0" y="95.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">bootloader</tspan>
+</text>
+<text x="730.0" y="95.3" fill="#23201c" font-size="18" font-weight="400" text-anchor="middle">
+<tspan x="730.0" dy="0.0">操作系统内核</tspan>
+</text>
+<text x="285.0" y="59.8" fill="#8c887f" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="285.0" dy="0.0">交棒</tspan>
+</text>
+<text x="585.0" y="59.8" fill="#8c887f" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="585.0" dy="0.0">交棒</tspan>
+</text>
+<text x="130.0" y="161.5" fill="#23201c" font-size="13.5" font-weight="400" text-anchor="middle">
+<tspan x="130.0" dy="0.0">住在主板芯片里，负责把硬件唤醒，</tspan>
+<tspan x="130.0" dy="16.9">在 ESP 分区里找到 .efi 并加载</tspan>
+</text>
+<text x="430.0" y="161.5" fill="#23201c" font-size="13.5" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">住在硬盘里，负责把内核和 initramfs</tspan>
+<tspan x="430.0" dy="16.9">从磁盘搬进内存，备好启动参数</tspan>
+</text>
+<text x="730.0" y="161.5" fill="#23201c" font-size="13.5" font-weight="400" text-anchor="middle">
+<tspan x="730.0" dy="0.0">操作系统的核心：自我初始化、加载</tspan>
+<tspan x="730.0" dy="16.9">完整驱动、挂根文件系统、启动 init</tspan>
+</text>
+<text x="430.0" y="247.8" fill="#8c887f" font-size="13" font-weight="400" text-anchor="middle">
+<tspan x="430.0" dy="0.0">「交棒」可理解为移交 CPU 控制权，也就是接下来该谁的代码被执行</tspan>
+</text>
+</svg>

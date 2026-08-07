@@ -1,0 +1,88 @@
+<svg viewBox="48.0 4.5 1022.0 458.5" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif" class="excalidraw-svg" role="img">
+<defs><marker id="ah_9a978f" markerWidth="10" markerHeight="10" refX="6.2" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.6,0.7 L7,3.2 L0.6,5.7" fill="none" stroke="#9a978f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="70.0" y="70.0" width="128.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="240.0" y="70.0" width="128.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="410.0" y="70.0" width="128.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="580.0" y="70.0" width="128.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="750.0" y="70.0" width="128.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="920.0" y="70.0" width="128.0" height="52.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="85.0" y="175.0" width="130.0" height="42.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="85.0" y="231.0" width="130.0" height="42.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="85.0" y="287.0" width="130.0" height="42.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="85.0" y="343.0" width="130.0" height="42.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<rect x="85.0" y="399.0" width="130.0" height="42.0" rx="10" fill="#d3e2ef" stroke="#d3e2ef" stroke-width="1"/>
+<line x1="202.0" y1="96.0" x2="236.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="372.0" y1="96.0" x2="406.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="542.0" y1="96.0" x2="576.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="712.0" y1="96.0" x2="746.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="882.0" y1="96.0" x2="916.0" y2="96.0" stroke="#9a978f" stroke-width="2" stroke-linecap="round" marker-end="url(#ah_9a978f)"/>
+<line x1="70.0" y1="152.0" x2="1048.0" y2="152.0" stroke="#eeece7" stroke-width="1.4" stroke-linecap="round"/>
+<text x="134.0" y="101.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="134.0" dy="0.0">电源就绪</tspan>
+</text>
+<text x="134.0" y="37.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="134.0" dy="0.0">BMC拉PWR_ON</tspan>
+</text>
+<text x="304.0" y="101.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="304.0" dy="0.0">复位取指</tspan>
+</text>
+<text x="304.0" y="37.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="304.0" dy="0.0">焐死指向固件</tspan>
+</text>
+<text x="474.0" y="101.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="474.0" dy="0.0">内存就绪</tspan>
+</text>
+<text x="474.0" y="37.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="474.0" dy="0.0">借缓存过渡</tspan>
+</text>
+<text x="644.0" y="101.0" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="644.0" dy="0.0">自检+枚举</tspan>
+</text>
+<text x="644.0" y="37.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="644.0" dy="0.0">扫设备+建资料</tspan>
+</text>
+<text x="814.0" y="90.4" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="814.0" dy="0.0">交给</tspan>
+<tspan x="814.0" dy="21.2">bootloader</tspan>
+</text>
+<text x="814.0" y="37.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="814.0" dy="0.0">读引导程序</tspan>
+</text>
+<text x="984.0" y="90.4" fill="#23201c" font-size="17" font-weight="400" text-anchor="middle">
+<tspan x="984.0" dy="0.0">交给</tspan>
+<tspan x="984.0" dy="21.2">内核</tspan>
+</text>
+<text x="984.0" y="37.5" fill="#8c887f" font-size="12" font-weight="400" text-anchor="middle">
+<tspan x="984.0" dy="0.0">交棒退场</tspan>
+</text>
+<text x="150.0" y="200.4" fill="#23201c" font-size="15" font-weight="400" text-anchor="middle">
+<tspan x="150.0" dy="0.0">两路电源</tspan>
+</text>
+<text x="232.0" y="200.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="232.0" dy="0.0">待机电源常通(配BMC远程开关机) / 主电源经 PWR_ON 信号才给CPU等大件供电</tspan>
+</text>
+<text x="150.0" y="256.4" fill="#23201c" font-size="15" font-weight="400" text-anchor="middle">
+<tspan x="150.0" dy="0.0">无内存过渡</tspan>
+</text>
+<text x="232.0" y="256.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="232.0" dy="0.0">DRAM 还不能用时，固件先借 CPU 缓存当临时内存，做最早的芯片组基础设置</tspan>
+</text>
+<text x="150.0" y="312.4" fill="#23201c" font-size="15" font-weight="400" text-anchor="middle">
+<tspan x="150.0" dy="0.0">POST + 枚举</tspan>
+</text>
+<text x="232.0" y="312.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="232.0" dy="0.0">自检CPU/内存/关键设备是否正常，再扫 PCIe 总线把设备一个个找出来初始化</tspan>
+</text>
+<text x="150.0" y="368.4" fill="#23201c" font-size="15" font-weight="400" text-anchor="middle">
+<tspan x="150.0" dy="0.0">BIOS vs UEFI</tspan>
+</text>
+<text x="232.0" y="368.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="232.0" dy="0.0">找引导程序的方式不同：传统BIOS 翻 MBR；UEFI 去 ESP 分区里找 .efi 文件</tspan>
+</text>
+<text x="150.0" y="424.4" fill="#23201c" font-size="15" font-weight="400" text-anchor="middle">
+<tspan x="150.0" dy="0.0">交棒链条</tspan>
+</text>
+<text x="232.0" y="424.9" fill="#23201c" font-size="14" font-weight="400" text-anchor="start">
+<tspan x="232.0" dy="0.0">固件(UEFI) → bootloader → 操作系统内核，控制权层层移交，一步比一步贴近应用</tspan>
+</text>
+</svg>
