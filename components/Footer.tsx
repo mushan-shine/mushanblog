@@ -34,23 +34,6 @@ export default function Footer() {
 
       <span style={{ color: "#d4d0ca", fontSize: "12px", marginLeft: "8px" }}>·</span>
 
-      {/* ICP备案号 */}
-      <a
-        href="https://beian.miit.gov.cn"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          textDecoration: "none",
-          color: "#b0aca4",
-          fontSize: "16px",
-          whiteSpace: "nowrap",
-        }}
-      >
-        京ICP备2026051325号-1
-      </a>
-
-      <span style={{ color: "#d4d0ca", fontSize: "12px" }}>·</span>
-
       {/* 公安备案号 */}
       <a
         href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802050252"
@@ -72,6 +55,23 @@ export default function Footer() {
           style={{ width: "16px", height: "16px", objectFit: "contain" }}
         />
         京公网安备11010802050252号
+      </a>
+
+      <span style={{ color: "#d4d0ca", fontSize: "12px" }}>·</span>
+
+      {/* ICP备案号 */}
+      <a
+        href="https://beian.miit.gov.cn"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          textDecoration: "none",
+          color: "#b0aca4",
+          fontSize: "16px",
+          whiteSpace: "nowrap",
+        }}
+      >
+        京ICP备2026051325号-1
       </a>
     </footer>
   );
