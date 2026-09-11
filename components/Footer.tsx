@@ -14,24 +14,44 @@ export default function Footer() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "16px",
+        gap: "6px",
       }}
     >
-      {/* 格言 */}
-      <span
+      {/* 地球图标 + 格言 */}
+      <div style={{ display: "flex", alignItems: "center", gap: "0px" }}>
+        <img src="/earth-nobg.png" alt="earth" style={{ width: "46px", height: "46px", objectFit: "contain" }} />
+        <span
+          style={{
+            fontFamily: "var(--font-caveat)",
+            fontSize: "20px",
+            color: "#b0aca4",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Grounded on Earth: respecting the laws, pursuing the truth, and applying the logic.
+        </span>
+      </div>
+
+      <span style={{ color: "#d4d0ca", fontSize: "12px", marginLeft: "8px" }}>·</span>
+
+      {/* ICP备案号 */}
+      <a
+        href="https://beian.miit.gov.cn"
+        target="_blank"
+        rel="noreferrer"
         style={{
-          fontFamily: "var(--font-caveat)",
-          fontSize: "14px",
+          textDecoration: "none",
           color: "#b0aca4",
+          fontSize: "16px",
           whiteSpace: "nowrap",
         }}
       >
-        Grounded on Earth: respecting the laws, pursuing the truth, and applying the logic.
-      </span>
+        京ICP备2026051325号-1
+      </a>
 
       <span style={{ color: "#d4d0ca", fontSize: "12px" }}>·</span>
 
-      {/* 备案号 */}
+      {/* 公安备案号 */}
       <a
         href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802050252"
         target="_blank"
@@ -42,14 +62,14 @@ export default function Footer() {
           gap: "4px",
           textDecoration: "none",
           color: "#b0aca4",
-          fontSize: "12px",
+          fontSize: "16px",
           whiteSpace: "nowrap",
         }}
       >
         <img
           src="/beian-icon.png"
           alt="公安备案"
-          style={{ width: "14px", height: "14px", objectFit: "contain" }}
+          style={{ width: "16px", height: "16px", objectFit: "contain" }}
         />
         京公网安备11010802050252号
       </a>
