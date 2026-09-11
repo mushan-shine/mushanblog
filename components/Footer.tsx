@@ -14,30 +14,45 @@ export default function Footer() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "4px",
+        gap: "16px",
       }}
     >
-      <img
-        src="/earth-nobg.png"
-        alt="earth"
-        style={{
-          width: "72px",
-          height: "72px",
-          objectFit: "contain",
-          flexShrink: 0,
-        }}
-      />
-      <p
+      {/* 格言 */}
+      <span
         style={{
           fontFamily: "var(--font-caveat)",
-          fontSize: "18px",
-          color: "#8c887f",
+          fontSize: "14px",
+          color: "#b0aca4",
           whiteSpace: "nowrap",
-          lineHeight: 1,
         }}
       >
         Grounded on Earth: respecting the laws, pursuing the truth, and applying the logic.
-      </p>
+      </span>
+
+      <span style={{ color: "#d4d0ca", fontSize: "12px" }}>·</span>
+
+      {/* 备案号 */}
+      <a
+        href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802050252"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "4px",
+          textDecoration: "none",
+          color: "#b0aca4",
+          fontSize: "12px",
+          whiteSpace: "nowrap",
+        }}
+      >
+        <img
+          src="/beian-icon.png"
+          alt="公安备案"
+          style={{ width: "14px", height: "14px", objectFit: "contain" }}
+        />
+        京公网安备11010802050252号
+      </a>
     </footer>
   );
 }
